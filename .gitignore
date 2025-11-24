@@ -2,3 +2,8 @@
 .DS_Store
 .vscode/**
 .idea/**
+# Local server artifacts
+server-8000.log
+server-8000.pid
+/node_modules/
+npm-debug.log
