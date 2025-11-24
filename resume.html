@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ashutosh Kumar Gupta — Resume</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    /* print-friendly overrides */
+    body { background: #fff; color: #111; }
+    .resume-wrapper { max-width: 900px; margin: 28px auto; padding: 28px; }
+    header.resume-header { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    header.resume-header h1 { font-size: 26px; margin:0; color:#071428 }
+    .contact-compact { text-align: right; font-size:14px; color:#333 }
+    .section { margin-top: 18px; }
+    .section h2 { font-size:18px; margin-bottom:8px; color:#0b76ef }
+    .resume-bullets li { margin-bottom:6px; }
+    /* hide site chrome when printing */
+    @media print {
+      a[href]:after { content: " (" attr(href) ")"; color: #000; }
+      .no-print { display: none !important; }
+      body { -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <div class="no-print" style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;">
+      <div>
+        <button onclick="window.print()" class="primary-btn">Print / Save as PDF</button>
+        <a class="primary-btn wh" href="/docs/Ashutosh_Resume.pdf" download>Download original PDF</a>
+      </div>
+      <div style="font-size:13px;color:#666">Generated for print-friendly view</div>
+    </div>
+
+    <header class="resume-header">
+      <h1>Ashutosh Kumar Gupta</h1>
+      <div class="contact-compact">
+        Bangalore, Karnataka, India<br>
+        <a href="mailto:as01hu@gmail.com">as01hu@gmail.com</a><br>
+        <a href="tel:+919006764157">+91 9006764157</a>
+      </div>
+    </header>
+
+    <section class="section" id="summary">
+      <h2>Professional Summary</h2>
+      <p>Experienced Senior Software Engineer with over 8 years in designing and developing scalable backend systems. Skilled in Java, Spring Boot, Kafka, and distributed systems with a strong focus on performance optimization, security, and CI/CD practices. Proven ability to lead projects end-to-end, drive cross-functional improvements, optimize processes, and enhance team productivity.</p>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Work Experience</h2>
+
+      <h3>Walmart — Senior Software Engineer <small style="color:#666;">Bangalore | Oct 2021 – Present</small></h3>
+      <ul class="resume-bullets">
+        <li>Spearheaded and managed cross-functional teams of 5–6 developers across Incentive, Driver Suggestion, and Supply-Demand systems to drive feature delivery and operational excellence.</li>
+        <li>Led infrastructure cost optimization initiatives within the LMD pillar, coordinating a team of 6 developers to reduce cloud spend and improve system efficiency.</li>
+        <li>Directed development of the Popular Busy Hours feature using ML, Kafka, and Elasticsearch, enhancing driver engagement with intelligent time-slot recommendations.</li>
+        <li>Designed and implemented a smart Block Offer System that achieved an 83% reduction in driver drop rates, improving driver retention and platform reliability.</li>
+        <li>Led upgrades of core services from Spring Boot 2.2.x to 2.7.x and Java 8 to Java 17; personally upgraded 4 services and mentored team members to scale upgrades across 10–12 services.</li>
+        <li>Resolved critical batching deadlocks and eliminated manual reconciliation errors, significantly improving system stability and operational accuracy.</li>
+        <li>Executed a zero-downtime migration from MsSQL to Azure DB, ensuring seamless data continuity and improved scalability.</li>
+        <li>Proactively mitigated major security vulnerabilities including Log4J (CVE-2021-45105).</li>
+      </ul>
+      <p><em>Tech Stack:</em> Java, Spring Boot, Kafka, MySQL, Azure DB, Elasticsearch, Microservices, GitHub Copilot, Qodo, AI tools</p>
+
+      <hr>
+
+      <h3>Housing.com — Senior Software Development Engineer <small style="color:#666;">Gurugram | Nov 2019 – Oct 2021</small></h3>
+      <ul class="resume-bullets">
+        <li>Led development of Owner Monetization and Referral systems, reducing error rates and improving background job efficiency.</li>
+        <li>Secured systems via findings from an internal hackathon; integrated Razorpay in payment services.</li>
+        <li>Built a reusable rate limiter wrapper for use across services.</li>
+      </ul>
+      <p><em>Tech Stack:</em> Java, Ruby on Rails, MongoDB, PostgreSQL, RabbitMQ, Microservices</p>
+
+      <hr>
+
+      <h3>Lenskart.com — Software Development Engineer <small style="color:#666;">Gurugram | Aug 2019 – Nov 2019</small></h3>
+      <ul class="resume-bullets">
+        <li>Introduced retry mechanisms improving system performance by ~70% and automated daily manual efforts.</li>
+      </ul>
+      <p><em>Tech Stack:</em> Java, Spring Boot, MongoDB, MySQL, Kafka</p>
+
+      <hr>
+
+      <h3>Sprinklr — Software Engineer <small style="color:#666;">Gurugram | May 2017 – Aug 2019</small></h3>
+      <ul class="resume-bullets">
+        <li>Developed Asset Manager for inter-platform operations and optimized DB connections to improve API response times (from ~5 min to &lt;30 sec).</li>
+        <li>Introduced Lombok to streamline development and reduce boilerplate.</li>
+      </ul>
+      <p><em>Tech Stack:</em> Java, Spring, Spring Boot, MySQL, MongoDB, Elasticsearch, Jenkins</p>
+
+    </section>
+
+    <section class="section" id="internship">
+      <h2>Internship</h2>
+      <h3>Muto Technologies — Software Development Intern <small style="color:#666;">Summer 2016</small></h3>
+      <ul class="resume-bullets">
+        <li>Built a CI server and push notification service; GitHub Repo: <a href="https://github.com/mutohq" target="_blank" rel="noopener noreferrer">https://github.com/mutohq</a></li>
+      </ul>
+      <p><em>Tech Stack:</em> Go, Python, PostgreSQL</p>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <ul class="resume-bullets">
+        <li><strong>B.Tech, Computer Science &amp; Engineering</strong> — National Institute of Technology (NIT), Hamirpur | 2013 – 2017 | CGPA: 8.21/10</li>
+        <li><strong>XII</strong> — Anugrah Narayan College, Patna | 2012 | 75.8%</li>
+        <li><strong>X</strong> — High School, Itarhi, Buxar | 2010 | 88%</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
+

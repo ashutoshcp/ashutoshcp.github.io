@@ -91,14 +91,20 @@
     <div class="container">
       <div class="row fullscreen align-items-center justify-content-between">
         <div class="col-lg-6 col-md-6 banner-left">
-          <h1>Ashutosh Gupta</h1>
-          <a download href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase" aria-label="Download resume">Download Resume</a>
-          <a href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase" aria-label="View resume">View Resume</a>
-          <br /><br /><br /><br />
-          <p><a href="docs/After10th.pdf">Career Path After 10th</a></p>
-          <p><a href="docs/UC-M9VR5MRA.pdf">Jenkins CI Certificate</a></p>
-          <p><a href="docs/UC-QB6N8WN6.jpg">MongoDB Certificate</a></p>
-          <p><a href="https://www.codechef.com/users/l58akg" target="_blank" rel="noopener noreferrer">Code Chef Profile</a></p>
+          <h1 id="hero-title">Ashutosh Gupta</h1>
+          <p class="lead">Software Engineer & DevOps enthusiast — building scalable systems, CI/CD pipelines and reliable cloud infrastructure.</p>
+
+          <div class="ctas" role="group" aria-label="Primary actions">
+            <a download href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase" aria-label="Download resume">Download Resume</a>
+            <a href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase" aria-label="View resume">View Resume</a>
+          </div>
+
+          <div class="links-list" aria-label="Important documents">
+            <p><a href="docs/After10th.pdf">Career Path After 10th</a></p>
+            <p><a href="docs/UC-M9VR5MRA.pdf">Jenkins CI Certificate</a></p>
+            <p><a href="docs/UC-QB6N8WN6.jpg">MongoDB Certificate</a></p>
+            <p><a href="https://www.codechef.com/users/l58akg" target="_blank" rel="noopener noreferrer">Code Chef Profile</a></p>
+          </div>
         </div>
         <div class="col-lg-6 col-md-6 banner-right square">
           <img class="img-fluid" src="img/AshuImg.jpg" alt="Portrait of Ashutosh Gupta">
@@ -107,6 +113,130 @@
     </div>
   </main>
   <!-- End banner Area -->
+
+  <!-- start resume Area -->
+  <section id="resume" class="resume-area section-gap" aria-labelledby="resume-heading">
+    <div class="container">
+      <h2 id="resume-heading" class="section-title">Resume</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="single-resume-block">
+            <h3 class="resume-section-title">Professional Summary</h3>
+            <p class="resume-summary">Experienced Senior Software Engineer with over 8 years in designing and developing scalable backend systems. Skilled in Java, Spring Boot, Kafka, and distributed systems with a strong focus on performance optimization, security, and CI/CD practices. Proven ability to lead projects end-to-end, drive cross-functional improvements, optimize processes, and enhance team productivity.</p>
+          </div>
+
+          <div class="single-resume-block">
+            <h3 class="resume-section-title">Work Experience</h3>
+
+            <article class="resume-item">
+              <header>
+                <h4 class="company">Walmart — Senior Software Engineer</h4>
+                <div class="meta">Bangalore | Oct 2021 – Present</div>
+              </header>
+              <ul class="resume-bullets">
+                <li>Spearheaded and managed cross-functional teams of 5–6 developers across Incentive, Driver Suggestion, and Supply-Demand systems to drive feature delivery and operational excellence.</li>
+                <li>Led infrastructure cost optimization initiatives within the LMD pillar, coordinating a team of 6 developers to reduce cloud spend and improve system efficiency.</li>
+                <li>Directed development of the Popular Busy Hours feature using ML, Kafka, and Elasticsearch, enhancing driver engagement with intelligent time-slot recommendations.</li>
+                <li>Designed and implemented a smart Block Offer System that achieved an 83% reduction in driver drop rates, improving driver retention and platform reliability.</li>
+                <li>Led upgrades of core services from Spring Boot 2.2.x to 2.7.x and Java 8 to Java 17; personally upgraded 4 services and mentored team members to scale upgrades across 10–12 services.</li>
+                <li>Resolved critical batching deadlocks and eliminated manual reconciliation errors, significantly improving system stability and operational accuracy.</li>
+                <li>Executed a zero-downtime migration from MsSQL to Azure DB, ensuring seamless data continuity and improved scalability.</li>
+                <li>Proactively mitigated major security vulnerabilities including Log4J (CVE-2021-45105).</li>
+                <li class="tech">Tech Stack: Java, Spring Boot, Kafka, MySQL, Azure DB, Elasticsearch, Microservices, GitHub Copilot, Qodo, AI tools</li>
+              </ul>
+            </article>
+
+            <article class="resume-item">
+              <header>
+                <h4 class="company">Housing.com — Senior Software Development Engineer</h4>
+                <div class="meta">Gurugram | Nov 2019 – Oct 2021</div>
+              </header>
+              <ul class="resume-bullets">
+                <li>Led development of Owner Monetization and Referral systems, reducing error rates and improving background job efficiency.</li>
+                <li>Secured systems via findings from an internal hackathon; integrated Razorpay in payment services.</li>
+                <li>Built a reusable rate limiter wrapper for use across services.</li>
+                <li class="tech">Tech Stack: Java, Ruby on Rails, MongoDB, PostgreSQL, RabbitMQ, Microservices</li>
+              </ul>
+            </article>
+
+            <article class="resume-item">
+              <header>
+                <h4 class="company">Lenskart.com — Software Development Engineer</h4>
+                <div class="meta">Gurugram | Aug 2019 – Nov 2019</div>
+              </header>
+              <ul class="resume-bullets">
+                <li>Introduced retry mechanisms improving system performance by ~70% and automated daily manual efforts.</li>
+                <li class="tech">Tech Stack: Java, Spring Boot, MongoDB, MySQL, Kafka</li>
+              </ul>
+            </article>
+
+            <article class="resume-item">
+              <header>
+                <h4 class="company">Sprinklr — Software Engineer</h4>
+                <div class="meta">Gurugram | May 2017 – Aug 2019</div>
+              </header>
+              <ul class="resume-bullets">
+                <li>Developed Asset Manager for inter-platform operations and optimized DB connections to improve API response times (from ~5 min to &lt;30 sec).</li>
+                <li>Introduced Lombok to streamline development and reduce boilerplate.</li>
+                <li class="tech">Tech Stack: Java, Spring, Spring Boot, MySQL, MongoDB, Elasticsearch, Jenkins</li>
+              </ul>
+            </article>
+
+          </div>
+
+          <div class="single-resume-block">
+            <h3 class="resume-section-title">Internship</h3>
+            <article class="resume-item">
+              <header>
+                <h4 class="company">Muto Technologies — Software Development Intern</h4>
+                <div class="meta">Summer 2016</div>
+              </header>
+              <ul class="resume-bullets">
+                <li>Built a CI server and push notification service; GitHub Repo: <a href="https://github.com/mutohq" target="_blank" rel="noopener noreferrer">https://github.com/mutohq</a></li>
+                <li class="tech">Tech Stack: Go, Python, PostgreSQL</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="single-resume-block">
+            <h3 class="resume-section-title">Education</h3>
+            <ul class="resume-bullets">
+              <li><strong>B.Tech, Computer Science &amp; Engineering</strong><br/>National Institute of Technology (NIT), Hamirpur | 2013 – 2017 | CGPA: 8.21/10</li>
+              <li><strong>XII</strong> – Anugrah Narayan College, Patna | 2012 | 75.8%</li>
+              <li><strong>X</strong> – High School, Itarhi, Buxar | 2010 | 88%</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="contact-card">
+            <h4>Contact</h4>
+            <p><strong>Ashutosh Kumar Gupta</strong></p>
+            <p>Bangalore, Karnataka, India</p>
+            <p><a href="mailto:as01hu@gmail.com">as01hu@gmail.com</a></p>
+            <p><a href="tel:+919006764157">+91 9006764157</a></p>
+            <p><a href="docs/Ashutosh_Resume.pdf" download>Download PDF Resume</a></p>
+          </div>
+
+          <div class="skills-card">
+            <h4>Skills &amp; Technologies</h4>
+            <ul class="skill-list">
+              <li>Java, Spring Boot, Java 17</li>
+              <li>Kafka, RabbitMQ</li>
+              <li>MySQL, PostgreSQL, MongoDB, Azure DB</li>
+              <li>Elasticsearch</li>
+              <li>Microservices, CI/CD, Jenkins</li>
+              <li>Cloud cost optimization & migrations</li>
+              <li>Security: vulnerability mitigation (Log4J)</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+  <!-- end resume Area -->
 
   <!-- start footer Area -->
   <footer class="footer-area section-gap">

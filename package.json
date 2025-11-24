@@ -4,11 +4,14 @@
   "private": true,
   "devDependencies": {
     "htmlhint": "^1.4.0",
-    "pa11y": "^9.0.1"
+    "pa11y": "^9.0.1",
+    "puppeteer": "^20.0.0",
+    "minimist": "^1.2.8"
   },
   "scripts": {
     "lint:html": "htmlhint index.html",
     "a11y": "pa11y http://localhost:8000/",
-    "a11y:json": "pa11y http://localhost:8000/ --reporter json > pa11y-report.json"
+    "a11y:json": "pa11y http://localhost:8000/ --reporter json > pa11y-report.json",
+    "resume:pdf": "node tools/generate_resume_pdf.js --url http://localhost:8000/resume.html --output docs/resume-print.pdf"
   }
 }
