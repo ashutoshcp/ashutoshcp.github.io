@@ -583,4 +583,61 @@ $(document)
           .ajaxChimp();
       });
 
+    // Floating TOC for resume
+    (function() {
+      function buildTOC() {
+        var toc = $('<nav id="resume-toc" class="no-print" aria-label="Resume table of contents"></nav>');
+        var list = $('<ul></ul>');
+        $('#resume, #resume-heading, #summary, #experience, #internship, #education').each(function() {
+          var el = $(this);
+          if (el.attr('id')) {
+            var title = el.find('h2').first().text() || el.attr('id');
+            var item = $('<li></li>');
+            var a = $('<a></a>').attr('href', '#' + el.attr('id')).text(title);
+            item.append(a);
+            list.append(item);
+          }
+        });
+        if (list.children().length > 0) {
+          toc.append(list);
+          $('body').append(toc);
+
+          // style
+          $('#resume-toc').css({ position: 'fixed', right: '18px', top: '120px', width: '180px', background: '#fff', border: '1px solid rgba(0,0,0,0.06)', padding: '10px', borderRadius: '6px', boxShadow: '0 8px 20px rgba(0,0,0,0.06)', zIndex: 9999 });
+          $('#resume-toc ul').css({ listStyle: 'none', padding: 0, margin: 0 });
+          $('#resume-toc a').css({ color: '#0b76ef', display: 'block', padding: '6px 4px', fontSize: '13px' });
+
+          $('#resume-toc a').on('click', function(e) {
+            e.preventDefault();
+            var target = $($(this).attr('href'));
+            if (target.length) {
+              $('html,body').animate({ scrollTop: target.offset().top - 80 }, 600);
+            }
+          });
+
+          // highlight on scroll
+          $(window).on('scroll', function() {
+            var scrollPos = $(document).scrollTop();
+            $('#resume h2').each(function() {
+              var top = $(this).offset().top - 100;
+              var bottom = top + $(this).outerHeight();
+              var id = $(this).parent().attr('id');
+              if (scrollPos >= top && scrollPos < bottom) {
+                $('#resume-toc a').removeClass('active');
+                $('#resume-toc a[href="#' + id + '"]').addClass('active');
+              }
+            });
+          });
+
+          // initial highlight run
+          $(window).trigger('scroll');
+        }
+      }
+
+      $(document).ready(function() {
+        if ($('#resume').length || window.location.pathname.indexOf('resume.html') !== -1) {
+          buildTOC();
+        }
+      });
+    })();
   });
