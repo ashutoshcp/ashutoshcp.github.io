@@ -1,0 +1,7 @@
+/* Minimal placeholder for jquery-ui used by index.html
+   If you have the real jquery-ui CSS, replace this file.
+*/
+
+/* Prevent missing-file warning during static checks. */
+.ui-helper-hidden { display: none; }
+

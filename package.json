@@ -1,0 +1,14 @@
+{
+  "name": "ashutoshcp.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "htmlhint": "^1.4.0",
+    "pa11y": "^9.0.1"
+  },
+  "scripts": {
+    "lint:html": "htmlhint index.html",
+    "a11y": "pa11y http://localhost:8000/",
+    "a11y:json": "pa11y http://localhost:8000/ --reporter json > pa11y-report.json"
+  }
+}

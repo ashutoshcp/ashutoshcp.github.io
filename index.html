@@ -1,17 +1,74 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="en" class="no-js">
 
 <head>
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Meta Description -->
-  <meta name="description" content="">
+  <meta name="description" content="Ashutosh Gupta — Software Engineer & DevOps enthusiast. Portfolio with resume, certifications, and projects.">
   <!-- Meta Keyword -->
-  <meta name="keywords" content="">
+  <meta name="keywords" content="Ashutosh Gupta, Software Engineer, DevOps, Jenkins, MongoDB, Portfolio, Resume, CodeChef">
   <!-- meta character set -->
   <meta charset="UTF-8">
   <!-- Site Title -->
-  <title>Ashutosh</title>
+  <title>Ashutosh Gupta — Software Engineer</title>
+
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="Ashutosh Gupta — Software Engineer" />
+  <meta property="og:description" content="Ashutosh Gupta — Software Engineer & DevOps enthusiast. Portfolio with resume, certifications, and projects." />
+  <meta property="og:image" content="/img/AshuImg.jpg" />
+  <meta property="og:url" content="https://ashutoshcp.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@ashutosh_0412" />
+
+  <!-- Favicon / Touch icon (add files to repo for best results) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/favicon.svg" color="#0b76ef">
+  <meta name="msapplication-TileColor" content="#0b76ef">
+  <meta name="theme-color" content="#0b76ef">
+
+  <!-- Small accessibility & focus styles -->
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* Prefer focus-visible where available and keep a fallback for older browsers */
+    .skip-link:focus,
+    .skip-link:focus-visible {
+      position: static;
+      width: auto;
+      height: auto;
+      left: 0;
+      padding: 8px 16px;
+      background: #0b76ef;
+      color: #fff;
+      z-index: 1000;
+    }
+
+    /* Clear, visible focus for interactive elements */
+    :focus {
+      outline: 3px solid rgba(255, 204, 0, 0.95);
+      outline-offset: 2px;
+    }
+
+    /* Use focus-visible to avoid showing outlines for mouse users where supported */
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+  </style>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
   <!--CSS-->
@@ -19,7 +76,6 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/nice-select.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/owl.carousel.css">
@@ -27,28 +83,29 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- #header -->
 
   <!-- start banner Area -->
-  <section class="banner-area">
+  <main id="main-content" class="banner-area" tabindex="-1">
     <div class="container">
       <div class="row fullscreen align-items-center justify-content-between">
         <div class="col-lg-6 col-md-6 banner-left">
           <h1>Ashutosh Gupta</h1>
-          <a download href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase">Download Resume</a>
-          <a view href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase">View Resume</a>
+          <a download href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase" aria-label="Download resume">Download Resume</a>
+          <a href="/docs/Ashutosh_Resume.pdf" class="primary-btn text-uppercase" aria-label="View resume">View Resume</a>
           <br /><br /><br /><br />
           <p><a href="docs/After10th.pdf">Career Path After 10th</a></p>
           <p><a href="docs/UC-M9VR5MRA.pdf">Jenkins CI Certificate</a></p>
           <p><a href="docs/UC-QB6N8WN6.jpg">MongoDB Certificate</a></p>
-          <p><a href="https://www.codechef.com/users/l58akg">Code Chef Profile</a></p>
+          <p><a href="https://www.codechef.com/users/l58akg" target="_blank" rel="noopener noreferrer">Code Chef Profile</a></p>
         </div>
-        <div class="square">
-          <img class="img-fluid" src="img/AshuImg.jpg" alt="">
-                </div>
+        <div class="col-lg-6 col-md-6 banner-right square">
+          <img class="img-fluid" src="img/AshuImg.jpg" alt="Portrait of Ashutosh Gupta">
         </div>
       </div>
-  </section>
+    </div>
+  </main>
   <!-- End banner Area -->
 
   <!-- start footer Area -->
@@ -79,13 +136,12 @@
         </div>
         <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
           <div class="single-footer-widget">
-            <div class="footer-social d-flex align-items-center">
-              <a href="https://www.facebook.com/ashutoshnith"> <i class="fa fa-facebook"></i></a>
-              <a href="https://twitter.com/ashutosh_0412"> <i class="fa fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/ashutoshnith/"> <i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/ashutoshcp"> <i class="fa fa-github"></i></a>
-              <a href="mailto:as01hu@gmail.com"> <i class="fa fa-envelope-o"></i></a>
-              <a href="callto:+91-900-676-4157"> <i class="fa fa-phone"></i></a>
+            <div class="footer-social d-flex align-items-center" role="navigation" aria-label="Social links">
+              <a href="https://www.linkedin.com/in/ashutoshnith/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Ashutosh Gupta"> <i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn — Ashutosh Gupta</span></a>
+              <a href="https://twitter.com/ashutosh_0412" target="_blank" rel="noopener noreferrer" aria-label="Twitter — @ashutosh_0412"> <i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter — @ashutosh_0412</span></a>
+              <a href="https://github.com/ashutoshcp" target="_blank" rel="noopener noreferrer" aria-label="GitHub — ashutoshcp"> <i class="fa fa-github" aria-hidden="true"></i><span class="sr-only">GitHub — ashutoshcp</span></a>
+              <a href="mailto:as01hu@gmail.com" aria-label="Email — as01hu@gmail.com"> <i class="fa fa-envelope-o" aria-hidden="true"></i><span class="sr-only">Email — as01hu@gmail.com</span></a>
+              <a href="tel:+919006764157" aria-label="Phone — +91 900 676 4157"> <i class="fa fa-phone" aria-hidden="true"></i><span class="sr-only">Phone — +91 900 676 4157</span></a>
             </div>
           </div>
         </div>
@@ -111,6 +167,7 @@
   <script src="js/simple-skillbar.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/mail-script.js"></script>
+  <!-- keep target attributes where we explicitly want new-tab behavior -->
   <script src="js/main.js"></script>
 </body>
 

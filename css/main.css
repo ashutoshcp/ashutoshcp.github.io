@@ -2549,6 +2549,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+/* Responsive image size caps for banner portrait */
+@media (min-width: 1400px) {
+  /* on very large screens, cap the image width so it doesn't dominate */
+  .banner-right img { max-width: 480px; }
+}
+
+@media (max-width: 420px) {
+  /* on very small screens ensure the image is smaller to avoid pushing content */
+  .banner-right img { max-width: 220px; }
+}
+
 /*-------- End Banner Area ------------*/
 /*-------- Start home-about Area ------------*/
 @media (max-width: 767px) {
@@ -4287,274 +4298,136 @@ dl.accordion.time-line:before {
   color: #8490ff !important;
 }
 
-/*============ End Blog Single Styles  =============*/
-/* =================================== */
-/*  Contact Page Styles
-/* =================================== */
-.contact-page-area {
-  background: #f9f9ff;
+/* Accessibility improvements: visible focus and higher contrast for primary buttons */
+:root {
+  --primary-color: #0b76ef; /* matches theme-color */
+  --primary-contrast: #ffffff;
 }
 
-.contact-page-area .map-wrap {
-  margin-bottom: 120px;
+a:focus, button:focus, .primary-btn:focus {
+  outline: 3px solid rgba(255, 204, 0, 0.95);
+  outline-offset: 3px;
 }
 
-@media (max-width: 991px) {
-  .contact-page-area .map-wrap {
-    margin-bottom: 50px;
-  }
+/* prefer focus-visible where supported */
+:focus:not(:focus-visible) { outline: none; }
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--primary-contrast);
 }
 
-.contact-page-area .contact-btns {
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  padding: 40px;
-  color: #fff;
-  margin-bottom: 30px;
+.primary-btn:hover, .primary-btn:active {
+  background-color: #0962b8;
 }
 
-.contact-page-area .contact-btns:hover {
-  color: #fff;
+/* Accessibility: increase contrast for banner simple links and footer text */
+.banner-left a {
+  color: #000a15; /* high contrast dark color recommended by pa11y */
+}
+.banner-left a:hover,
+.banner-left a:focus {
+  color: #0b76ef; /* theme accent on hover/focus */
 }
 
-.contact-page-area .form-area .form-control:focus {
-  box-shadow: none !important;
-  border-color: #ced4da !important;
+.footer-text {
+  color: #767676; /* adjusted to meet contrast requirements */
 }
 
-.contact-page-area .form-area input {
-  padding: 15px;
+/* Fix: ensure banner-right aligns image to the right and keeps it responsive */
+.banner-right {
+  display: flex;
+  justify-content: flex-end; /* push content to right */
+  align-items: center; /* vertically center in the column */
 }
 
-.contact-page-area .form-area input,
-.contact-page-area .form-area textarea {
-  border-radius: 0;
-  font-size: 13px !important;
+.banner-right img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.contact-page-area .form-area textarea {
-  height: 190px;
-  margin-top: 0px;
-  padding: 15px;
-}
-
-.contact-page-area .form-area .genric-btn {
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  border-radius: 0 !important;
-  font-size: 14px;
-  text-transform: uppercase !important;
-}
-
-.contact-page-area .form-area .genric-btn:hover {
-  border: 1px solid #8490ff;
-  color: #8490ff !important;
-}
-
-@media (max-width: 991px) {
-  .contact-page-area .address-wrap {
-    margin-bottom: 30px;
-  }
-}
-
-.contact-page-area .address-wrap .single-contact-address {
-  margin-bottom: 8px;
-}
-
-.contact-page-area .address-wrap .single-contact-address h5 {
-  font-weight: 300;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.contact-page-area .address-wrap .single-contact-address .lnr {
-  font-size: 30px;
-  font-weight: 500;
-  color: #8490ff;
-  margin-right: 30px;
-}
-
-/* =================================== */
-/*  Footer Styles
-/* =================================== */
+/* Footer: align and beautify single-footer-widget */
 .footer-area {
-  background-color: #04091e;
+  padding-top: 80px; /* slightly tighter */
+  padding-bottom: 60px;
+  background-color: #1f1f1f; /* darker bg for contrast */
+  color: #dcdcdc;
 }
 
-.single-footer-widget h4 {
-  color: #fff !important;
-  margin-bottom: 25px;
-  font-weight: 500;
+.footer-area .single-footer-widget {
+  text-align: center; /* center content inside widgets */
+  padding: 10px 20px;
 }
 
-.single-footer-widget .form-control {
-  border: none;
-  width: 80% !important;
-  font-weight: 300;
-  background: #f9f9ff;
-  padding-left: 20px;
-  border-radius: 0;
+.footer-area .single-footer-widget .footer-text {
+  margin: 0;
+  color: #bdbdbd;
   font-size: 14px;
-  line-height: normal !important;
-  color: #222;
+  line-height: 1.6;
 }
 
-.single-footer-widget .form-control:focus {
-  box-shadow: none;
-  color: #222;
+/* Social icons */
+.footer-area .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  color: #e6e6e6;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.single-footer-widget ul li {
-  margin-bottom: 10px;
-}
-
-.single-footer-widget ul li a {
-  color: #777777;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.single-footer-widget ul li a:hover {
-  color: #8490ff;
-}
-
-.single-footer-widget .bb-btn {
-  color: #8490ff;
+.footer-area .footer-social a:hover,
+.footer-area .footer-social a:focus {
+  background: var(--primary-color);
   color: #fff;
-  font-weight: 300;
-  border-radius: 0;
-  z-index: 9999;
-  cursor: pointer;
+  transform: translateY(-3px);
 }
 
-.single-footer-widget .info {
-  margin-top: 25px;
-  color: #fff;
-  font-size: 12px;
+/* Adjust layout for the footer columns */
+.footer-area .social-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.single-footer-widget .info.valid {
-  color: green;
-}
+/* Make footer responsive: stack on small screens */
+@media (max-width: 767px) {
+  .footer-area .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.single-footer-widget .info.error {
-  color: red;
-}
-
-.single-footer-widget .btn {
-  font-size: 1.2rem;
-  border-radius: 0;
-  background: #8490ff;
-  color: #fff;
-}
-
-.single-footer-widget .btn .lnr {
-  line-height: inherit;
-  font-size: 13px;
-  padding: 0px 4px;
-}
-
-.single-footer-widget ::-moz-selection {
-  /* Code for Firefox */
-  background-color: #191919 !important;
-  color: #777777;
-}
-
-.single-footer-widget ::selection {
-  background-color: #191919 !important;
-  color: #777777;
-}
-
-.single-footer-widget ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #777777;
-  font-weight: 300;
-}
-
-.single-footer-widget :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #777777;
-  opacity: 1;
-  font-weight: 300;
-}
-
-.single-footer-widget ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #777777;
-  opacity: 1;
-  font-weight: 300;
-}
-
-.single-footer-widget :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #777777;
-  font-weight: 300;
-}
-
-.single-footer-widget ::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #777777;
-  font-weight: 300;
-}
-
-@media (max-width: 991.98px) {
-  .single-footer-widget {
-    margin-bottom: 30px;
+  .footer-area .single-footer-widget {
+    margin-bottom: 20px;
   }
 }
 
-.single-footer-widget .footer-social a {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  text-align: center;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+/* small accessibility tweak: increase contrast for link inside footer */
+.footer-area a { color: #e6e6e6; }
+.footer-area a:hover, .footer-area a:focus { color: var(--primary-color); }
+
+/* Screen reader only helper (accessible helper) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
-.single-footer-widget .footer-social a i {
-  vertical-align: bottom;
-  color: #fff;
+/* Small tweak: ensure footer social icons don't hide focus outline for keyboard users */
+.footer-area .footer-social a:focus {
+  outline: 2px dashed #fff;
+  outline-offset: 3px;
 }
 
-.single-footer-widget .footer-social a:hover i {
-  color: #8490ff;
-}
-
-.footer-bottom {
-  padding-top: 50px;
-}
-
-.footer-bottom .footer-social {
-  text-align: right;
-}
-
-@media (max-width: 991px) {
-  .footer-bottom .footer-social {
-    text-align: left;
-    margin-top: 30px;
-  }
-}
-
-.footer-bottom .lnr,
-.footer-bottom a {
-  color: #8490ff;
-}
-
-.footer-text a {
-  color: #8490ff;
-}
-
-.square {
-  height: 400px;
-  width: 400px;
-}
-
-/*-------- end footer Area -------------*/
